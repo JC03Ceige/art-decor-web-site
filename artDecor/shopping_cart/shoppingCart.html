@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Art Decor</title>
+
+  <meta charset="UTF-8" />
+
+  <!-- Learn more about meta viewport method here https://www.w3schools.com/css/css_rwd_viewport.asp -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Note that these links need to be loaded in this specific order to ensure that all components function correctly. -->
+
+  <!-- JQuery Libraries: Google hosted-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <!-- Link to bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+  </script>
+
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="../artDecor.css" />
+
+  <!-- Fonts imported from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oi&family=Poiret+One&family=Yeseva+One&display=swap"
+    rel="stylesheet">
+</head>
+
+<!-- The main body of the shopping cart page. -->
+
+<body class="shoppingCart">
+  <div class="container">
+    <div class="row">
+      <header>
+        <!-- Navbar element inside header using bootstrap grid. This is a nested grid. -->
+        <nav class="navbar fixed-top navbar-expand navbar-light"
+          style="background-color: rgba(154.0, 169.0, 179.0, 1);">
+          <div class="col-auto">
+            <!-- 'span' elements are used to give the Logo different fonts.
+             The logo also has an id to identify it as a hover effect is used to indicate to the user that it is interactive. -->
+            <h1><a id="logo" class="nav-link active" aria-current="page" href="#top"><span class="display-3"
+                  style="font-family: 'Yeseva One';">art.</span><span class="display-1"
+                  style="font-family: 'Poiret One';">Deco</span><span class="display-4" style="font-family: 'Oi';">
+                  r</span></a></h1>
+          </div>
+          <div class="col-4"></div>
+          <div class="col-6">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../catalogue/catalogue.html">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../theTeam/ourTeam.html">Our Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../contactPage/contactPage.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-light bt-sm" type="submit">Search</button>
+                    </form>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="../shopping_cart/shoppingCart.html"><i class="bi bi-cart4 ml-5"
+                        style="font-size: 1.5rem;"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <div id="shoppingCart" class="mt-5 pt-5">
+    <h1 class="display-3">Your Shopping Cart</h1>
+
+    <!-- Table that holds all the items for the shopping cart. *empty cart hidden with jQuery. -->
+    <table class="table shpCart" id="shpCart">
+      <!-- Headings for the shopping cart table.-->
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th></th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th> - </th>
+        </tr>
+      </thead>
+    </table>
+
+
+    <!-- This div contains elements that apply to the all the content of the page.-->
+    <div>
+      <div class="btn-group dropright m-4">
+        <!-- Drop-down in button format to allow users to choose their delivery options. -->
+        <button type="button" class="btn btn-outline-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+          aria-expanded="false">
+          Delivery Options
+        </button>
+        <div class="dropdown-menu p-2 pl-4">
+          <div class="form-check">
+            <!-- This radio button launches the delivery modal - note the data-toggle attribute. -->
+            <input class="form-check-input" type="radio" name="deliveryRadios" id="deliveryRadio" value="deliver"
+              data-toggle="modal" data-target="#deliveryModal">
+            <label class="form-check-label" for="exampleRadio">
+              Delivery (Standard fee of R100.*)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="deliveryRadios" id="collectRadio" value="collect">
+            <label class="form-check-label" for="collectRadio">
+              Self-Collection
+            </label>
+          </div>
+          <div class="dropdown-divider"></div>
+          <p>*Free delivery for orders over R20 000.00</p>
+        </div>
+      </div>
+      <input class="form-control cartTotal mt-2 ml-4 col-3" placeholder="Your cart is empty."></input>
+      <!-- Button group check-out and clear options -->
+      <button type="button" class="btn btn-outline-info checkOut ml-4" data-toggle="modal" data-target="#discountModal"
+        data-whatever="*discount code*">Check Out</button>
+      <button class="btn btn-danger clear m-2">Clear Cart</button>
+    </div>
+
+
+    <!--Delivery form modal 
+    This modal is triggered when the user chooses delivery and prompts the user for delivery details. -->
+    <div class="modal fade" id="deliveryModal" tabindex="-1" role="dialog" aria-labelledby="deliveryModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="deliveryModalLabel">Delivery Form</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="nameAndSurnameInput">Name and Surname</label>
+                <input type="text" class="form-control" id="nameAndSurnameInput"
+                  placeholder="Please enter you name and surname...">
+              </div>
+              <div class="form-group">
+                <label for="streetAddress1">Street Address Line 1</label>
+                <input type="text" class="form-control" id="streetAddress1"
+                  placeholder="Building / complex name and number *if applicable...">
+              </div>
+              <div class="form-group">
+                <label for="streetAddress2">Street Address Line 2</label>
+                <input type="text" class="form-control" id="streetAddress2" placeholder="Street name and number...">
+              </div>
+              <div class="form-group">
+                <label for="cityTown">City / Town</label>
+                <input type="text" class="form-control" id="cityTown" placeholder="City or Town...">
+              </div>
+              <div class="form-group">
+                <label for="postalCode">Postal Code</label>
+                <input type="text" class="form-control" id="postalCode" placeholder="4-digit Postal Code...">
+              </div>
+              <div class="form-check">
+                <!-- Each option changes the cart total according to the info in the tooltip. 
+                Each element contains a tooltip that provides details about the delivery options. -->
+                <input class="form-check-input" type="radio" name="deliveryOptRadios" id="standardDelivery"
+                  value="standard" data-toggle="tooltip" data-placement="top"
+                  title="*can take up to 5 business days, depending on the size of the order.">
+                <label class="form-check-label" for="standardDelivery" data-toggle="tooltip" data-placement="top"
+                  title="*can take up to 5 business days, depending on the size of the order.">
+                  Standard Delivery
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="deliveryOptRadios" id="expressDelivery"
+                  value="express" data-toggle="tooltip" data-placement="top"
+                  title="*can take up to days, including weekends. **Additional delivery fee of R1000 will be charged.">
+                <label class="form-check-label" for="expressDelivery" data-toggle="tooltip" data-placement="top"
+                  title="*can take up to days, including weekends. **Additional delivery fee of R1000 will be charged.">
+                  Express Delivery
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="deliveryOptRadios" id="overnightDelivery"
+                  value="overnight" data-toggle="tooltip" data-placement="top"
+                  title="*can take up to days, including weekends. **Additional delivery fee of R1000 will be charged.">
+                <label class="form-check-label" for="overnightDelivery" data-toggle="tooltip" data-placement="top"
+                  title="*24-hour delivery. **Additional delivery fee of R2000 will be charged.">
+                  Overnight Express
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="notesInstructions">Additional Note / Instructions</label>
+                <textarea class="form-control" id="notesInstructions" rows="3"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Discount coupon modal
+    This modal is trigered when the user checks out. It gives them the option to add the promo code or to continue without the promo. -->
+    <div class="modal fade" id="discountModal" tabindex="-1" aria-labelledby="discountModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="discountModalLabel">Discount Coupon</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="md-form">
+              <div class="form-group">
+                <label for="discount-code" class="col-form-label">Please enter your discount code below:</label>
+                <input type="text" class="form-control discCode" id="discount-code">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="noDiscount" data-dismiss="modal">Continue without
+              discount</button>
+            <button type="button" class="btn btn-info" id="applyDiscount" data-dismiss="modal">Apply Discount</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm order button trigger modal 
+  Because alert buttons can't be event triggers, I used the modal with buttons to promt the confirmation alert with the reference. This also allows to add the "pay" option to the confirmation alert. -->
+  <div class="modal btnModalConfirm p-1" id="btnConfirmModal" tabindex="-1" role="dialog"
+    aria-labelledby="confirmBtnModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content" style="background-color: rgba(255, 255, 255, 0.84); border: mintcream, solid;">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info confirmBtn text.center" data-toggle="modal"
+            data-target="#confirmModal" data-dismiss="modal">
+            Confirm Order
+          </button>
+          <button type="button" class="btn btn-secondary backBtn mx-4 my-2 text.center" data-toggle="modal"
+            data-target="#confirmModal" data-dismiss="modal">
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Confrim order modal -->
+  <div class="modal fade" type="alert" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="confirmModalLabel">Order confirmed!</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- This is done in jQuery is order to genereate a new order reference. -->
+        <div class="modal-body orderReference">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+          <!-- Currently serving purely design purpose. -->
+          <button type="button" class="btn btn-outline-info payBtn" data-dismiss="modal">Pay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <hr class="mt-5">
+  <div class="row align-items-end m-auto mt-5 pt-5">
+    <div class="col-3"></div>
+    <div class="col align-self-center m-auto">
+      <footer>
+        This page was built by JC van der Merwe for HyperionDev Task6.<br>
+        Contact him via <a href="mailto:jcvdmerwe03@gmail.com">Email</a> or at <a href="tell:+27662248156">+27 66 224
+          8156</a>.
+      </footer>
+    </div>
+    <div class="col-3"></div>
+  </div>
+
+  <script type="text/javascript" src="../artDecor.js"></script>
+
+</body>
+
+</html>

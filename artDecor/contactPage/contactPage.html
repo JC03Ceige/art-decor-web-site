@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Art Decor</title>
+
+        <meta charset="UTF-8" />
+
+        <!-- Learn more about meta viewport method here https://www.w3schools.com/css/css_rwd_viewport.asp -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Link to bootstrap -->
+        <!-- Note that these links need to be loaded in this specific order to ensure that all components function correctly. -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!-- JQuery Google hosted-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+        <!-- Link to CSS file -->
+        <link rel="stylesheet" href="../artDecor.css" />
+
+        <!-- Fonts imported from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oi&family=Poiret+One&family=Yeseva+One&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Navbar element inside header using bootstrap grid. This is a nested grid. -->
+            <div class="row">
+                <header>
+                    <nav class="navbar fixed-top navbar-expand navbar-light" style="background-color: rgba(154.0, 169.0, 179.0, 1);">
+                        <div class="col-auto">
+                            <h1><a id="logo" class="nav-link active" aria-current="page" href="#top"><span class="display-3" style="font-family: 'Yeseva One';">art.</span><span class="display-1" style="font-family: 'Poiret One';">Deco</span><span class="display-4" style="font-family: 'Oi';">  r</span></a></h1>
+                        </div>
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                  </button>
+                                  <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                      <li class="nav-item">
+                                        <a class="nav-link" href="../catalogue/catalogue.html">Products</a>
+                                      </li>                                
+                                      <li class="nav-item">
+                                        <a class="nav-link" href="../theTeam/ourTeam.html">Our Team</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link active" href="#top">Contact</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <form class="d-flex">
+                                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                            <button class="btn btn-outline-light bt-sm" type="submit">Search</button>
+                                        </form>                                      
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" href="../shopping_cart/shoppingCart.html"><i class="bi bi-cart4 ml-5" style="font-size: 1.5rem;"></i>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+
+            <!-- The use of containers center the page contents while keeping everything in one basic element -->
+            <div class="container mt-4 pt-5">
+                <h1 class="display-3">Looking forward to hear from you.</h1>
+                <!-- The form is used to make user interaction easy and get feedback from the users directly -->
+                <form>
+                    <!-- This part of the form is used to get personal contact details from the user. -->
+                    <div class="form-group">
+                      <label for="contactUsName">Name</label>
+                      <input type="text" class="form-control" id="contactUsName" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactUsSurname">Last Name</label>
+                        <input type="text" class="form-control" id="contactUsSurname" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactUsEmail">Email</label>
+                        <input type="email" class="form-control" id="contactUsEmail" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactUsMobile">Mobile No.</label>
+                        <input type="tel" class="form-control" id="contactUsMobile" placeholder="(+xx)-00-000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="membershipNumber">Membership No. (*if applicable)</label>
+                        <input type="text" class="form-control" id="membershipNumber" placeholder="****-****-****-****">
+                    </div>
+
+                    <!-- Radio buttons allow the user only one option for submission -->
+                    <div class="form-group mt-3 pt-3">
+                        <label for="formGroupExampleInput">How would you like us to get in touch?</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="contactMethod" id="emailRadio" value="email" checked>
+                        <label class="form-check-label" for="emailRadio">
+                          Email
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="contactMethod" id="mobileRadio" value="mobile">
+                        <label class="form-check-label" for="mobileRadio">
+                          Mobile
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="contactMethod" id="whatsappRadios" value="whatsapp">
+                        <label class="form-check-label" for="whatsappRadios">
+                          WhatsApp
+                        </label>
+                    </div>
+                    
+                    <!-- Textarea is used to give user a larger form area for input.  -->
+                    <div class="form-group mt-3 pt-3">
+                      <label for="customerQuery">Please ask away. Any and all questions are welcome ;)</label>
+                      <textarea class="form-control" id="customerQuery" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-light">Send</button>
+                  </form>
+            </div>
+
+            <!-- Table with additional links (links are not implemented yet), customized with Bootstrap classes -->
+            <table class="table table-hover table-dark mt-5 pt-5 shadow-lg">
+                <thead>
+                  <tr>
+                    <th scope="col">Find Us</th>
+                    <th scope="col">Get In Touch</th>
+                    <th scope="col">Browse</th>
+                    <th scope="col">About</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Store Locator</td>
+                    <td>Email</td>
+                    <td>Warehouse Selection</td>
+                    <td>Blog</td>
+                  </tr>
+                  <tr>
+                    <td>Gauteng</td>
+                    <td>Call</td>
+                    <td>Clearance Sale</td>
+                    <td>Our Inspiration</td>
+                  </tr>
+                  <tr>
+                    <td>Western Cape</td>
+                    <td>WhatsApp</td>
+                    <td>Promotions</td>
+                    <td>Our Partners</td>
+                  </tr>
+                  <tr>
+                    <td>Lesotho</td>
+                    <td>Tweet Us</td>
+                    <td>Sneak Peak</td>
+                    <td>Loyalty Program</td>
+                  </tr>
+                </tbody>
+            </table>
+
+            <!-- Footer -->
+            <div class="row align-items-end m-auto mt-5 pt-5">
+                <div class="col-3"></div>
+                <div class="col align-self-center m-auto">
+                    <footer>
+                        This page was built by JC van der Merwe for HyperionDev Task6.<br>
+                        Contact him via <a href="mailto:jcvdmerwe03@gmail.com">Email</a> or at <a href="tell:+27662248156">+27 66 224 8156</a>.
+                    </footer>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        
+        </div>
+        <script type="text/javascript" src="../artDecor.js"></script>
+    </body>
+</html>
