@@ -172,9 +172,9 @@ console.log()
 
 JC van der Merwe
 
- * ![Twitter]({https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white})[](https://twitter.com/JCvanderMerwe4)
- * [[LinkedIn]({https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white})](https://www.linkedin.com/in/jc-van-der-merwe-0a565860/) 
- * [[GitHub]({https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white})](https://github.com/JC03Ceige)
+![Twitter]({https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white})[](https://twitter.com/JCvanderMerwe4)
+![LinkedIn]({https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white})[](https://www.linkedin.com/in/jc-van-der-merwe-0a565860/) 
+![GitHub]({https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white})[](https://github.com/JC03Ceige)
 
 ## Version History
 
