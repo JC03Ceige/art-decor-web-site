@@ -148,10 +148,11 @@ connected as sibling elements with a hidden check-box. Upon 'checked' the card e
 ```
 This can be over-writen in JavaScript if it better suits you purposes.
 
+* see below for how the card-checkbox work in action:
 ![Card-Checkbox1](https://github.com/JC03Ceige/art-decor-web-site/blob/master/artDecor/images/Art%20Decor%20-%20card_checbox1.png?raw=true)
-![Card-Checkbox2](/images/Art Decor - card_checbox2.png)
-![Card-Checkbox3](/images/Art Decor - card_checbox3.png)
-![Card-Checkbox4](/images/Art Decor - card_checbox4.png)
+![Card-Checkbox2](https://github.com/JC03Ceige/art-decor-web-site/blob/master/artDecor/images/Art%20Decor%20-%20card_checbox2.png?raw=true)
+![Card-Checkbox3](https://github.com/JC03Ceige/art-decor-web-site/blob/master/artDecor/images/Art%20Decor%20-%20card_checbox3.png?raw=true)
+![Card-Checkbox4](https://github.com/JC03Ceige/art-decor-web-site/blob/master/artDecor/images/Art%20Decor%20-%20card_checbox4.png?raw=true)
 
 
 * You will notice that the shopping cart page makes use of a lot of modals and other dynamically loaded elements and functions. It is important to understand how the [bootstrap modals](https://getbootstrap.com/docs/4.0/components/modal/) operate in order to maninpulate them accoridng to your UX design. The order in which they appear on the HTML, especially when nested, has an impact on their accesibility.
@@ -171,7 +172,7 @@ console.log()
 
 JC van der Merwe
 
- * [Twitter]({https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white})[](https://twitter.com/JCvanderMerwe4)
+ * ![Twitter]({https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white})[](https://twitter.com/JCvanderMerwe4)
  * [[LinkedIn]({https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white})](https://www.linkedin.com/in/jc-van-der-merwe-0a565860/) 
  * [[GitHub]({https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white})](https://github.com/JC03Ceige)
 
