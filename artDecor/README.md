@@ -24,6 +24,11 @@ Also ensure that your imported links to jquery, bootstrap and other external lib
 
 ### Installing
 
+* Clone this repo
+```
+git clone https://github.com/JC03Ceige/art-decor-web-site.git
+```
+
 * As this is a web site, it doesn't require any detailed installation instructions. Simply note that you do require an up-to-date internet browser to run the site as intended.
 * If you want/need to make any adjustments to the code, a feature rich text editor or preferabbly VS Code is recommended.
 
@@ -172,9 +177,9 @@ console.log()
 
 JC van der Merwe
 
-![Twitter]({https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white}) [twitter](https://twitter.com/JCvanderMerwe4)
-![LinkedIn]({https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white}) [linkedin](https://www.linkedin.com/in/jc-van-der-merwe-0a565860/) 
-![GitHub]({https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white}) [github](https://github.com/JC03Ceige)
+[Twitter](https://twitter.com/JCvanderMerwe4)
+[LinkedIn](https://www.linkedin.com/in/jc-van-der-merwe-0a565860/) 
+[GitHub](https://github.com/JC03Ceige)
 
 ## Version History
 
