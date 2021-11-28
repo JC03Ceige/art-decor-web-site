@@ -148,7 +148,7 @@ connected as sibling elements with a hidden check-box. Upon 'checked' the card e
 ```
 This can be over-writen in JavaScript if it better suits you purposes.
 
-![Card-Checkbox1](/images/Art Decor - card_checbox1.png)
+![Card-Checkbox1](https://github.com/JC03Ceige/art-decor-web-site/blob/master/artDecor/images/Art%20Decor%20-%20card_checbox1.png?raw=true)
 ![Card-Checkbox2](/images/Art Decor - card_checbox2.png)
 ![Card-Checkbox3](/images/Art Decor - card_checbox3.png)
 ![Card-Checkbox4](/images/Art Decor - card_checbox4.png)
