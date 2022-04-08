@@ -1,111 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Art Decor</title>
 
-<head>
-  <title>Art Decor</title>
+    <meta charset="UTF-8" />
 
-  <meta charset="UTF-8" />
+    <!-- Learn more about meta viewport method here https://www.w3schools.com/css/css_rwd_viewport.asp -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Learn more about meta viewport method here https://www.w3schools.com/css/css_rwd_viewport.asp -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to bootstrap -->
+    <!-- Note that these links need to be loaded in this specific order to ensure that all components function correctly. -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
 
-  <!-- Link to bootstrap -->
-  <!-- Note that these links need to be loaded in this specific order to ensure that all components function correctly. -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
+    <!-- JQuery Google hosted-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-<!-- JQuery Google hosted-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="../artDecor.css" />
 
-  <!-- Link to CSS file -->
-  <link rel="stylesheet" href="../artDecor.css" />
+    <!-- Fonts imported from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oi&family=Poiret+One&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- Fonts imported from Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oi&family=Poiret+One&family=Yeseva+One&display=swap"
-    rel="stylesheet">
-</head>
+  <!-- This is body for the landing page and contains all the visible elements for the page. -->
 
-<!-- This is body for the landing page and contains all the visible elements for the page. -->
-
-<body class="lndBody">
-
-  <!-- div element is used as a container for the rest of the elements and to implement a page border with CSS -->
-  <!-- The use of containers center the page contents while keeping everything in one basic element -->
-  <div class="container body-border">
-
-    <!-- The navbar is used to give the users a clear banner with a button to enter the page.
+  <body class="lndBody" id="lndBody">
+    <!-- div element is used as a container for the rest of the elements and to implement a page border with CSS -->
+    <!-- The use of containers center the page contents while keeping everything in one basic element -->
+    <div class="container body-border">
+      <!-- The navbar is used to give the users a clear banner with a button to enter the page.
                Visibility is changed with the hover pseudo class in CSS. -->
-    <nav class="ldPage navbar fixed-top navbar-expand navbar-light" style="background-color: rgba(154.0, 169.0, 179.0, 0.8);">
-      <div class="col-auto">
-        <!-- 'span' elements are used to give the Logo different fonts. -->
-        <h1><a id="logo" class="ldPage nav-link active" aria-current="page" href="#home"><span class="display-3"
-              style="font-family: 'Yeseva One';">art.</span><span class="display-1"
-              style="font-family: 'Poiret One';">Deco</span><span class="display-4" style="font-family: 'Oi';">
-              r</span></a></h1>
-      </div>
-      <!-- Continue onto the website. -->
-      <div class="col align-self-center offset-md-5">
-        <a href="../catalogue/catalogue.html" class="btn btn-light" role="button"><span class="display-4"
-            style="font-family: 'Poiret One'; font-size: 2.2rem;">explore</span></a>
-      </div>
-    </nav>
+      <nav
+        class="ldPage navbar fixed-top navbar-expand navbar-light"
+        style="background-color: rgba(154, 169, 179, 0.8)"
+      >
+        <div class="col-auto">
+          <!-- 'span' elements are used to give the Logo different fonts. -->
+          <h1>
+            <a
+              id="logo"
+              class="ldPage nav-link active"
+              aria-current="page"
+              href="#home"
+              ><span class="display-3" style="font-family: 'Yeseva One'"
+                >art.</span
+              ><span class="display-1" style="font-family: 'Poiret One'"
+                >Deco</span
+              ><span class="display-4" style="font-family: 'Oi'"> r</span></a
+            >
+          </h1>
+        </div>
+        <!-- Continue onto the website. -->
+        <div class="col align-self-center offset-md-5">
+          <a
+            href="../catalogue/catalogue.html"
+            class="btn btn-light"
+            role="button"
+            ><span
+              class="display-4"
+              style="font-family: 'Poiret One'; font-size: 2.2rem"
+              >explore</span
+            ></a
+          >
+        </div>
+      </nav>
 
-    <!-- The carousel slide is used to preview products on the landing page as a means to entice the user to enter the site. -->
-    <div id="landingPageCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicator at the bottom that allows the user to pic a specific slide. -->
-      <ol class="carousel-indicators">
-        <li data-target="#landingPageCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#landingPageCarousel" data-slide-to="1"></li>
-        <li data-target="#landingPageCarousel" data-slide-to="2"></li>
-        <li data-target="#landingPageCarousel" data-slide-to="3"></li>
-        <li data-target="#landingPageCarousel" data-slide-to="4"></li>
-      </ol>
-      <!-- The slides containing the various images -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="ldPage d-block w-100" src="images/black-white-and-wood.jfif" alt="First slide">
+      <!-- The carousel slide is used to preview products on the landing page as a means to entice the user to enter the site. -->
+      <div id="landingPageCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicator at the bottom that allows the user to pic a specific slide. -->
+        <ol class="carousel-indicators">
+          <li
+            data-target="#landingPageCarousel"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#landingPageCarousel" data-slide-to="1"></li>
+          <li data-target="#landingPageCarousel" data-slide-to="2"></li>
+          <li data-target="#landingPageCarousel" data-slide-to="3"></li>
+          <li data-target="#landingPageCarousel" data-slide-to="4"></li>
+        </ol>
+        <!-- The slides containing the various images -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="ldPage d-block w-100"
+              src="images/black-white-and-wood.jfif"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="ldPage d-block w-100"
+              src="images/decor-ideas-for-large-walls.jpg"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="ldPage d-block w-100"
+              src="images/teal-green-living-room.jpg"
+              alt="Third slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="ldPage d-block w-100"
+              src="images/brown-gold-and-grass.jpg"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="ldPage d-block w-100"
+              src="images/desert-glass-minimalist.jpg"
+              alt="Third slide"
+            />
+          </div>
         </div>
-        <div class="carousel-item">
-          <img class="ldPage d-block w-100" src="images/decor-ideas-for-large-walls.jpg">
-        </div>
-        <div class="carousel-item">
-          <img class="ldPage d-block w-100" src="images/teal-green-living-room.jpg" alt="Third slide">
-        </div>
-        <div class="carousel-item">
-          <img class="ldPage d-block w-100" src="images/brown-gold-and-grass.jpg">
-        </div>
-        <div class="carousel-item">
-          <img class="ldPage d-block w-100" src="images/desert-glass-minimalist.jpg" alt="Third slide">
-        </div>
+        <!-- Next and Previous buttons to switch between slides. -->
+        <a
+          class="carousel-control-prev"
+          href="#landingPageCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#landingPageCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-      <!-- Next and Previous buttons to switch between slides. -->
-      <a class="carousel-control-prev" href="#landingPageCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#landingPageCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
-  </div> <!-- Container End -->
+    <!-- Container End -->
 
-<!-- The javascript is loaded after the page loads to ensure all elements are available for events and other functions that could require it. -->
-<script type="text/javascript" src="../artDecor.js"></script>
-</body>
-
+    <!-- The javascript is loaded after the page loads to ensure all elements are available for events and other functions that could require it. -->
+    <script type="text/javascript" src="../artDecor.js"></script>
+  </body>
 </html>
